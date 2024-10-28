@@ -1,0 +1,82 @@
+.theperfect-arrival {
+  margin-top: 96px;
+  display: flex;
+  gap: 60px;
+  justify-content: space-between; /* İki bölümü ayırmak için */
+
+  .theperfect-arrival__left { /* _ yerine - kullanıldı */
+    width: 43%; /* Sol ve sağ bölümlere genişlik tanımlıyoruz */
+  }
+  .theperfect-arrival__right {
+    width: 57%;
+  }
+  
+  figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h2 {
+      font-size: 50px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin: 10px 0;
+     font-family: map-get($map: $mainFonts, $key:second );
+      text-decoration: none;
+      position: absolute;
+      margin: -30px;
+      color: black;
+   
+    }
+    a{
+      color: black;
+      text-decoration: none;
+     font-family: map-get($map: $mainFonts, $key:primary );
+      margin-top: -60px;
+      margin-left: 70px;
+      margin-right: 70px;
+      cursor: pointer;
+    }
+  }
+
+  img {
+    cursor: pointer;
+    width: 100%;
+    height: 600px;
+    object-fit: cover; /* Görsellerin düzgün yerleşmesi için */
+    margin-bottom: 10px;
+  }
+
+  button {
+    padding: 20px 30px;
+    
+    color:map-get($map: $mainColors, $key:black );
+    border: 1px solid map-get($map: $mainColors, $key:black );
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.3s;
+    font-weight: 400;
+    position: absolute;
+    margin-top: 70px;
+    font-family: map-get($map: $mainFonts, $key:primary );
+    font-size: 14px;
+    &:hover {
+      background-color:map-get($map: $mainColors, $key: black);
+    color: map-get($map: $mainColors, $key: white);}
+  }
+}
+
+@media (max-width: 990px) {
+  .theperfect-arrival{
+    display: block;
+    margin: 0 auto;
+    .theperfect-arrival__left { /* _ yerine - kullanıldı */
+      width: 100%; /* Sol ve sağ bölümlere genişlik tanımlıyoruz */
+    }
+    .theperfect-arrival__right {
+      width: 100%;
+      margin-top: 70px;
+    }
+  }
+}

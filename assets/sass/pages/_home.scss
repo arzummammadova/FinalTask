@@ -1,0 +1,349 @@
+.container {
+    @include container();
+    margin-top: 80px;
+}
+
+.bystyle {
+    display: flex;
+    grid-column-gap: 100px;
+    grid-row-gap: 100px;
+    grid-template-rows: auto;
+    grid-template-columns: .5fr 1fr;
+
+
+
+
+    &__leftside {
+        display: flex;
+        width: 30%;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .text {
+            h1 {
+                font-family: map-get($map: $mainFonts, $key: second);
+                text-transform: uppercase;
+                margin-top: 0;
+                margin-bottom: 10px;
+                font-size: 70px;
+                font-weight: 400;
+                line-height: 1.2em;
+            }
+        }
+
+        .bottom {
+            p {
+                padding-bottom: 20px;
+                font-family: map-get($map: $mainFonts, $key: primary);
+                color: map-get($map: $mainColors, $key: dark-grey);
+            }
+
+            button {
+                @include buttonw();
+               
+                transition: background-color 0.3s;
+            
+            }
+        }
+    }
+
+    &__rightside {
+        margin-top: 70px;
+        width: 70%;
+        grid-column-gap: 120px;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        display: grid;
+
+        figure {
+            width: 100%;
+            position: relative;
+
+            img {
+                width: 100%;
+                object-fit: cover; // Maintain image aspect ratio
+            }
+
+            .image-button {
+                @include image-button();
+            }
+
+            &:hover {
+                .image-button {
+                    opacity: 1; // Show button on hover
+                    visibility: visible; // Make it visible
+                    transition-delay: 0s; // Remove delay when hovering
+                }
+            }
+        }
+    }
+}
+
+.image-section {
+    margin-top: 80px;
+    width: 100%;
+
+    figure {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        object-fit: cover;
+
+        img {
+            width: 100%;
+            height: 600px;
+        }
+    }
+}
+
+.testimonials-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 60px 100px;
+
+}
+
+.testimonial-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.tfirst {
+    width: 80%;
+}
+
+.tsecond {
+    width: 100%;
+}
+
+.testimonial {
+    width: 48%;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    position: relative;
+}
+
+.testimoniall {
+    width: 10%;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.testimonial p:first-of-type {
+    font-family: map-get($map: $mainFonts, $key: primary);
+    font-size: 14px;
+
+    color: grey;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.testimonial p:last-of-type {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: map-get($map: $mainFonts, $key: second);
+}
+
+
+.testimonial p {
+    margin-bottom: 14px;
+
+}
+
+/* Xətləri testimonials arasında əlavə edirik */
+.line::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 80%;
+    background-color: rgba(0, 0, 0, 0.596);
+    left: -30px;
+    top: 10%;
+}
+
+.testimonial-row:first-of-type .testimonial:first-of-type::before,
+.testimonial-row:first-of-type .testimonial:nth-child(2)::before,
+.testimonial-row:nth-of-type(2) .testimonial::before,
+.testimonial-row:nth-of-type(3) .testimonial::before {
+    content: "";
+    height: 100%;
+    top: 0;
+}
+
+.testimonial-roww {
+    display: flex;
+}
+
+.ptestimonial {
+
+    padding-left: 30px;
+}
+
+.image-container {
+    width: 70%;
+    margin-bottom: 40px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.tthird {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.products {
+    padding-left: 100px;
+    h2{text-transform: uppercase;
+        font-size: 70px;
+        padding: 80px 0px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        font-family: map-get($map: $mainFonts, $key: second);
+    }
+    .product-top {
+     display: flex;
+     gap: 50px;
+
+        .product-top-left {
+            width: 100%;
+            height: 100%;
+            figure{
+                width: 100%;
+                object-fit: cover;
+                height: 100%;
+                img{
+                    // margin-left: 25px;
+                    width: 600px;
+                    height: 700px;
+                }
+            }
+        }
+        .product-top-right{
+            a{
+                font-family: map-get($map: $mainFonts, $key: second);
+                color: black;
+                text-decoration: none;
+                figure{
+                    width: 100% ;
+                    object-fit: cover;
+                    height: 100%;
+                    img{
+                        width: 300px;
+                        height: 100%;
+                    }
+                }
+                p{
+                    font-size: 20px;
+                    font-family: map-get($map: $mainFonts, $key:primary );
+                
+                span{
+                    text-decoration: line-through;
+                    padding-left: 15px;
+                    color: map-get($map: $mainColors, $key: dark-grey);
+                }
+                
+                }
+
+              .product-top-right-sub{
+                font-size: 30px;
+                padding: 10px 0px;
+                font-family: map-get($map: $mainFonts, $key:second );
+              }
+            }
+            width: 100%;
+            height: 80%;
+            padding-top:90px;
+            figure{
+                width: 100% ;
+                object-fit: cover;
+                height: 100%;
+                img{
+                    width: 400px;
+                    height: 100%;
+                  
+                }
+              
+            }
+        }
+    }
+}
+
+
+
+
+    .product-bottom-item{
+    
+     display: grid;
+        grid-column-gap: 69px;
+        grid-row-gap: 69px;
+
+        figure{
+            // width: 100%;
+            // height: 100%;
+            object-fit: cover;
+            img{
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+
+/* Mobil üçün xətləri çıxarma */
+@media (max-width: 768px) {
+    .testimonial {
+        width: 100%;
+    }
+
+    .image-container {
+        width: 100%;
+    }
+
+    .testimonial::before {
+        display: none;
+    }
+}
+
+@media (max-width: 990px) {
+    .bystyle {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+    }
+
+    .bystyle__leftside,
+    .bystyle__rightside {
+        width: 100%; // Full width for both sides
+    }
+
+    .bystyle__rightside figure .image-button {
+        opacity: 1; // Always show button on small screens
+        visibility: visible;
+        display: block;
+        transition-delay: 0s;
+    }
+}
+
+@media (max-width: 750px) {
+    .bystyle {
+
+        grid-row-gap: 50px;
+        display: grid;
+        grid-column-gap: 0px;
+    }
+
+    .image-button {
+        padding: 7px !important;
+        font-size: 13px !important;
+    }
+}

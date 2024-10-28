@@ -1,0 +1,109 @@
+footer{
+
+    img{
+        width: 100%;
+        border: none;
+        // border-bottom: 1px solid rgba(128, 128, 128, 0.767);
+        padding-bottom: 50px;
+    }
+    font-family: sans-serif;
+    .top{ 
+        padding: 20px;
+        justify-content:space-between;
+        display: flex;
+        border: none;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.767);
+      
+       .footerdesc{
+        font-size: 30px;
+        text-transform: uppercase;
+     
+       }
+       form{
+        padding: 10px;
+        .email{
+            padding:10px  20px;
+            margin-top: 30px;
+            width: 70%;
+            color: white;
+            border: 1px solid white;
+            background-color: transparent;
+        }
+
+        .submit{
+            padding:10px  10px;
+            width: 20%;
+            color: white;
+            border: 1px solid white;
+            background-color: transparent;
+        }
+       }
+    }
+    background-color: black;
+    color: white;
+    padding: 60px;
+   
+
+}
+
+.right-side{
+    gap: 20px;
+    display: flex;
+    figure{
+        img{
+            width: 270px;
+            height: 200px;
+        }
+    }
+}
+.right-side-store{
+    max-width: 200px;
+}
+.right-side-store-text{
+    font-size: 30px;
+}
+
+.location-link{
+    color: white;
+}
+
+
+svg{
+    width: 15px;
+    height: 15px;
+    fill: white;
+    margin-top: 7px;
+    margin-right: 5px;
+    display: inline;
+}
+
+.bottomm{
+    padding: 10px;
+    display: flex;
+    gap: 50px;
+    h3{
+        font-size: 23px;
+        text-transform: uppercase;
+    }
+    p{
+        padding-top: 10px;
+        font-size: 17px;
+        a{
+            color: white;
+        text-decoration: none;
+        }
+    }
+}
+.end{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 17px;
+    .privacy{
+        color: grey;
+        a{
+            color: white;
+        }
+    }
+}
+

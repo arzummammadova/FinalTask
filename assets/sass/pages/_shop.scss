@@ -1,0 +1,83 @@
+
+
+body{
+    font-family: "Fraunces", sans-serif;
+}
+
+#hero{  background-color: map-get($map: $mainColors, $key: black);
+    padding: rem(100);
+
+    h2{
+        text-align: center;
+        color: map-get($map: $mainColors, $key: white);
+        font-size: rem(67);
+    }
+  .hero{
+    @include flex();
+  
+    color: map-get($map: $mainColors, $key: white);
+   .buttons{
+    margin-top: rem(50);
+    .btn:first-child{
+        background-color:  map-get($map: $mainColors, $key: white);;
+        color: map-get($map: $mainColors, $key: black);
+    }
+    .btn{
+        padding: rem(15) rem(26);
+        background-color:transparent;
+        color: map-get($map: $mainColors, $key: white);
+        border:1px solid map-get($map: $mainColors, $key: white);
+        margin-right: rem(10);
+        margin-top: rem(20);
+        font-size: rem(17);
+        a{
+            color: map-get($map: $mainColors, $key: white);
+        }
+    }
+   }
+}  
+}
+.btn a{
+ color: white;
+}
+
+.products{
+ margin-top: rem(40);
+ 
+    .product{
+        position: relative;
+        width: 400px;
+        height: 400px;
+img{
+    width: 400px;
+    height: 400px;
+}
+
+    }
+}
+
+
+.navigation-number{
+    display: flex;
+    margin-bottom: rem(60);
+    justify-content: space-around;
+    align-items: center;
+    span{
+        color: map-get($map: $mainColors, $key: dark-grey);
+   
+    margin-top: rem(30);
+    font-size: rem(22); 
+    }
+    a{
+        text-decoration: none;
+        padding: 20px 30px;
+        background-color: map-get($map: $mainColors, $key:black);
+        color: map-get($map: $mainColors, $key: white);
+       
+    }
+    :hover{
+            background-color: map-get($map: $mainColors, $key: dark-grey);
+            color: map-get($map: $mainColors, $key: black);
+            transition: all 0.3s;
+        }
+}

@@ -1,0 +1,32 @@
+@function rem($px) {
+    @return $px / 16 * 1rem;
+  }
+  
+  @mixin font($fontsize: 1rem, $primary: 'DM Sans 9pt') {
+    font-family: $primary;
+    font-size: $fontsize;
+  }
+  
+  @mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  @mixin flexx($justify: center, $align: center, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+  }
+  @mixin container {
+    // max-width: 100%;
+    // padding-left: 20px;
+    // padding-right: 20px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+

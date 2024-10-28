@@ -1,0 +1,47 @@
+@mixin button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: absolute;
+
+  &:hover {
+    background-color: #555;
+  }
+}
+
+
+@mixin buttonw {
+  background-color: transparent;
+  padding: 20px 30px;
+  font-family: map-get($map: $mainFonts, $key: primary);
+  border: 1px solid map-get($map: $mainColors, $key: black);
+
+
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+
+}@mixin image-button($padding: 20px 60px) {
+  padding: $padding;
+  position: absolute; // Position absolutely to the figure
+  bottom: 50px; // Position above the bottom
+  left: 50%;
+  transform: translateX(-50%); // Center horizontally
+
+  cursor: pointer; // Pointer cursor
+  opacity: 0; // Hide by default
+  transition: opacity 0.5s ease; // Smooth transition for opacity
+  visibility: hidden; // Use visibility to hide element
+  transition-delay: 4s;
+  background-color: white;
+  padding: $padding; // Use the parameter for padding
+  font-size: 21px;
+  font-weight: 400;
+  color: black;
+  border: 1px solid map-get($map: $mainColors, $key: black);
+  font-family: map-get($map: $mainFonts, $key: second);
+}

@@ -1,0 +1,117 @@
+.herosection {
+  display: flex;
+  gap: 40px;
+
+  &__leftside {
+    width: 55%;
+    height: 100%;
+
+    figure {
+      display: flex;
+    align-items: center;
+    justify-content: center;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 950px;
+      }
+    }
+  }
+
+  .link {
+    text-align: center;
+
+    a {
+      color: black;
+      @include font();
+    }
+  }
+}
+
+.herosection_rightside {
+  width: 34%;
+  display: block;
+  height: 60%;
+  margin: 60px 60px 100px 60px;
+  position: relative;
+
+  .carousel {
+    width: 100%;
+    cursor: pointer;
+    height: 100%;
+    position: relative;
+  }
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+
+    .item {
+      min-width: 100%;
+      box-sizing: border-box;
+      position: relative;
+      overflow: visible;
+
+      img {
+        width: 100%;
+        height: 94%;
+        object-fit: cover;
+        transition: opacity 0.5s ease;
+      }
+    }
+  }
+
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    transform: translateY(-50%);
+
+    &.left {
+      left: -2px;
+    }
+
+    &.right {
+      right: -2px;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+      display: block;
+    }
+  }
+
+}
+.caption {
+  position: absolute;
+  margin: -33px;
+  transform: translateX(40%); 
+  font-size: 50px;
+  font-family: map-get($map: $mainFonts, $key:second);
+  color: map-get($map: $mainColors, $key: black);
+  font-weight: 400;
+  z-index: 3;
+}
+
+
+.hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}

@@ -1,0 +1,334 @@
+nav {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 30px 0;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr .5fr 1fr;
+  grid-auto-columns: 1fr;
+  align-items: center;
+  display: grid;
+
+  .nav {
+      display: flex;
+
+      &__list {
+          font-weight: 200;
+          display: flex;
+          letter-spacing: -1px;
+          gap: 50px;
+          list-style: none;
+          text-decoration: none;
+
+          &__item {
+              position: relative;
+
+              a {
+                  @include font(14px);
+                  color: #0a0a0abf;
+                  text-transform: uppercase;
+                  text-decoration: none;
+
+                  &:hover {
+                      text-decoration: underline;
+                      color: map-get($mainColors, dark-grey);
+                  }
+
+                  &:active {
+                      text-decoration: underline;
+                      color: map-get($mainColors, dark-grey);
+                  }
+              }
+
+              .active {
+                  text-decoration: underline;
+                  color: map-get($mainColors, dark-grey);
+              }
+
+              .pages::after {
+                  padding: 10px;
+                  content: url(/assets/images/down-arrow-svgrepo-com.svg);
+              }
+          }
+      }
+
+      .dropdown {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100px;
+          margin-top: 13px;
+          width: 200px;
+          display: none;
+          background-color: map-get($map: $mainColors, $key:black);
+          color: map-get($map: $mainColors, $key:white);
+          list-style: none;
+
+          li {
+              padding: 10px 20px;
+
+              a {
+                  color: map-get($mainColors, dark-grey);
+                  text-transform: none;
+              }
+
+              &:hover {
+                  background-color: map-get($mainColors, light-grey);
+              }
+              
+          }
+      }
+
+    
+   
+  }
+  .pages:hover .dropdown {
+    display: block;
+}
+  .logo {
+      figure {
+          width: 150px;
+          height: 34.42px;
+
+          img {
+              height: 100%;
+              object-fit: cover;
+          }
+      }
+  }
+
+  .search-shop {
+  
+        padding-bottom: 30px;
+      display: flex;
+      gap: 15px;
+      padding: 4px;
+      justify-content: end;
+  }
+
+  .burger-menu {
+      fill: white;
+      background-color:map-get($map: $mainColors, $key: dark-grey);
+      color: white;
+      display: none;
+      cursor: pointer;
+  }
+
+  @media (max-width: 990px) {
+
+    //  nav{
+    //   grid-template-columns: 1fr 1fr;
+    //   max-width: 94%;
+    // grid-template-columns: 4fr 191fr 7fr;
+    // }
+    .shop-card{
+      margin-top: 10px;
+    }
+   
+      .search {
+          display: none;
+      }
+      .dropdown{
+        position:absolute;
+        padding: 29px 100px 20px 20px;
+      }
+      .burger-menu {
+          display: block;
+          padding: 10px 15px;
+          font-size: 20px;
+      }
+
+      .nav__list {
+        gap: 10px;
+        padding: 29px 100px 20px 20px;
+        margin-top: 60px;
+        position:absolute;
+          display: none; /* Hide nav items by default on mobile */
+          flex-direction: column; /* Stack items vertically */
+         left: 0px;
+          background-color:map-get($map: $mainColors, $key: dark-grey);
+          &__item{
+            
+            a{
+              text-align: right;
+              color: white;
+            }
+          }
+          .active{
+            color: black;
+          }
+          &.active {
+           
+              display: flex; /* Show nav items when active */
+          }
+
+
+      }
+  }
+
+} 
+
+.search-modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-modal-content {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    margin: auto;
+}
+
+.search-modal h1 {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 45px;
+}
+
+.search-modal input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.search-modal button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.search-modal button:hover {
+    background-color: #555;
+}
+
+/* Close button styling */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+#searchIcon{
+    cursor: pointer;
+}
+
+.cart-popup {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden off-screen */
+    width: 360px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out; /* Smooth slide */
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cart-popup.open {
+    right: 0; /* Bring it on-screen */
+}
+
+.cart-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-popup-header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.close-btn {
+    cursor: pointer;
+    font-size: 24px;
+    border: none;
+    background: none;
+}
+
+.cart-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cart-content img {
+    width: 120px;
+    height: 100px;
+    height: auto;
+    margin-bottom: 20px;
+
+}
+
+.cart-content p {
+    font-size: 16px;
+    color: #717171;
+    margin-bottom: 20px;
+}
+
+.cart-footer {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.shop-btn {
+    padding: 20px 25px;
+    width: 180px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 0px;
+}
+
+.cart-footer button:hover {
+    background-color: #444;
+}
+
+#cart-icon {
+    cursor: pointer;
+}
+
+/* Overlay for dimming the background */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 999;
+}
+
+.overlay.show {
+    display: block;
+}

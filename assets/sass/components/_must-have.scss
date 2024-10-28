@@ -1,0 +1,113 @@
+.must-have-container {
+    max-width: 1380px;
+    
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Optional padding */
+}
+
+.must-have {
+    // gap: 45px;
+    // display: flex;
+    // flex-wrap: wrap; /* Allow cards to wrap */
+    // width: 100%;
+    // justify-content: space-around;
+    // text-align: start;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    display: grid;
+ 
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.must-have__title {
+    font-size: 70px;
+    line-height: 1.2em;
+    text-align: center;
+    font-weight: 500;
+    font-family: "Fraunces", sans-serif;
+    padding: 40px 0px 60px 0px;
+}
+
+.must-have__card {
+    /* Styles for the card */
+    flex: 1 1 calc(33.33% - 50px); /* Default: 3 cards per row */
+    margin: 10px; /* Space between cards */
+    position: relative; /* Positioning for absolute elements */
+    overflow: hidden; /* Hide overflow */
+}
+
+.must-have__card-link {
+    display: block; /* Make the link fill the card */
+    text-decoration: none;
+    color: map-get($map: $mainColors, $key:black );
+
+    position: relative; /* Positioning for child elements */
+
+    span{
+       text-decoration:line-through;
+       margin-left: 15px;
+       font-size: 14px;
+       font-family: map-get($map: $mainFonts, $key:primary );
+
+        color: map-get($map: $mainColors, $key: dark-grey);
+    }
+}
+
+.must-have__card-image,
+.must-have__card-image-hover {
+    width: 100%; /* Fill the card */
+    height: auto; /* Maintain aspect ratio */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.must-have__card-image-hover {
+    position: absolute; /* Overlay on top */
+    top: 0;
+    left: 0;
+    opacity: 0; /* Hide hover image initially */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.must-have__card:hover .must-have__card-image {
+    opacity: 0; /* Hide the default image on hover */
+}
+
+.must-have__card:hover .must-have__card-image-hover {
+    opacity: 1; /* Show the hover image on hover */
+}
+
+.must-have__card-description {
+    font-family:map-get($map: $mainFonts, $key: second);
+    padding: 5px 0px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.must-have__card-price {
+    /* Styles for the price */
+    display: inline;
+    font-family: map-get($map: $mainFonts, $key: primary);
+
+   
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 990px) {
+    .must-have{
+        grid-template-columns: 1fr 1fr;
+    }
+    // .must-have__card {
+    //     flex: 1 1 calc(50% - 50px); /* 2 cards per row */
+    // }
+}
+
+@media (max-width: 760px) {
+    // .must-have__card {
+      
+    //     flex: 1 1 100%; /* 1 card per row */
+    // }
+    .must-have{
+        grid-template-columns: 1fr;
+    }
+}

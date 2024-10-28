@@ -1,0 +1,35 @@
+.tickerwrapper {
+    color: map-get($mainColors, white);
+    position: relative;
+   
+    left: 0%;
+    border: 1px solid #444;
+    background: map-get($mainColors, black);
+    overflow: hidden;
+    cursor: pointer;
+  
+    ul {
+      padding: 10px 0px 4px 0px;
+    }
+  
+    ul.list {
+      display: inline-block;
+      list-style: none;
+  
+      &.cloned {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+  
+      li {
+        float: left;
+        padding-left: 40px;
+  
+        span {
+          @include font(14px);
+          line-height: 20px;
+    }
+  }
+}
+  }  
