@@ -25,9 +25,9 @@
 
   .image-section {
   position: relative;
-  width: 100vw; /* Ekranın tam enini əhatə etsin */
-  height: 100vh; /* Ekranın tam hündürlüyünü əhatə etsin */
-  overflow: hidden; /* Ekranı aşan kontenti gizlət */
+  width: 100vw;
+  height: 100vh; 
+  overflow: hidden;
 }
 
 .background-video {
@@ -36,8 +36,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Video ölçüsünü qoruyaraq ekranı ört */
-  z-index: -1; /* Videonu digər kontentlərin arxasında saxla */
+  object-fit: cover;
+  z-index: -1;
 }
 
 video {
@@ -53,9 +53,9 @@ video {
 
 .image-section {
   position: relative;
-  width: 100vw; /* Ekranın tam enini əhatə etsin */
+  width: 100vw; 
   
-  overflow: hidden; /* Ekranı aşan kontenti gizlət */
+  overflow: hidden; 
 }
 
 .background-video {
@@ -64,8 +64,8 @@ video {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Video ölçüsünü qoruyaraq ekranı ört */
-  z-index: -1; /* Videonu digər kontentlərin arxasında saxla */
+  object-fit: cover;
+  z-index: -1;
 }
 
 video {

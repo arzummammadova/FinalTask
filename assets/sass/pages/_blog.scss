@@ -1,0 +1,84 @@
+
+#hero{
+    h2{
+        font-family: "Fraunces";
+    }
+}
+.cards {
+    font-family: "Fraunces";
+    display: flex;
+flex-wrap: wrap;
+    align-items: center;
+    max-width: 87rem;
+    flex-wrap: wrap;
+    margin: 4rem auto;
+    gap: 3rem;
+  }
+  .card {
+    width: calc(100% / 3 - 2rem);
+    
+    &:hover {
+        img {
+            transform: scale(1.1);
+            transition: all 0.5s;
+        }
+    }
+}
+
+  .card figure {
+overflow: hidden;
+    width: 100%;
+
+       object-fit: cover;
+    height: 100%;
+  }
+  .card figure img {
+  
+    // width: 21rem;
+    // height: 27.5rem;
+    cursor: pointer;
+    width: 100%;
+  }
+
+.card-title{
+    font-size: 1.5rem;
+    padding: 1rem 0rem;
+    text-transform: uppercase;
+}
+.card-price{
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.card {
+position: relative;
+
+}
+
+.btnc{
+    padding: 0.5rem 2rem;
+    color: white;
+    position: absolute;
+    border: none;
+    top: 2rem;
+    font-family: sans-serif;
+    left: 1rem;
+    background-color:black!important;
+}
+
+
+@media (max-width:760px){
+    // #blog-cards{
+    //     .container{
+    //         .cards{
+    //             .card{
+    //                 width: 100%!important;
+    //             }
+    //         }
+    //     }
+    // }
+    .card-b{
+        width: 100%;
+
+    }
+}

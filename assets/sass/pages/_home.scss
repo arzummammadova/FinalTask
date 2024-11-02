@@ -69,6 +69,11 @@
             .image-button {
                 @include image-button();
             }
+            // .image-button {
+            //     position: relative; /* Və ya absolute, zərurətə görə */
+            //     z-index: 1;
+            //   }
+              
 
             &:hover {
                 .image-button {

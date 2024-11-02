@@ -27,18 +27,18 @@
 
 }@mixin image-button($padding: 20px 60px) {
   padding: $padding;
-  position: absolute; // Position absolutely to the figure
-  bottom: 50px; // Position above the bottom
+  position: absolute; 
+  bottom: 50px; 
   left: 50%;
-  transform: translateX(-50%); // Center horizontally
+  transform: translateX(-50%); 
 
-  cursor: pointer; // Pointer cursor
-  opacity: 0; // Hide by default
-  transition: opacity 0.5s ease; // Smooth transition for opacity
-  visibility: hidden; // Use visibility to hide element
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.5s ease; 
+  visibility: hidden; 
   transition-delay: 4s;
   background-color: white;
-  padding: $padding; // Use the parameter for padding
+  padding: $padding;
   font-size: 21px;
   font-weight: 400;
   color: black;

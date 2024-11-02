@@ -58,8 +58,9 @@ nav {
           top: 100%;
           left: 0;
           width: 100px;
-          margin-top: 13px;
+          margin-top: 2px;
           width: 200px;
+          padding: 10px;
           display: none;
           background-color: map-get($map: $mainColors, $key:black);
           color: map-get($map: $mainColors, $key:white);

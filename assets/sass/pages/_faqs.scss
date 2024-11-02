@@ -1,0 +1,51 @@
+
+
+
+.accordion {
+    width: 80%;
+    margin: 0 auto;
+    border:none;
+    background-color: #EDEDED;
+   margin-bottom: 1rem;
+   
+   
+}
+.accordion-title{
+    width: 80%;
+    margin: 0 auto;
+    font-family: "Fraunces";
+    font-size: 2.1rem;
+    
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+}
+
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
+.accordion-text {
+    text-transform: uppercase;
+    flex-grow: 1;
+    font-size: 1.2rem;
+    text-align: left;
+    font-family: "Fraunces";
+}
+
+.accordion-icon {
+    font-size: 20px;
+}
+
+.accordion-content {
+    display: none;
+    padding: 12px;
+    color: grey;
+    font-family: Arial, sans-serif;
+}

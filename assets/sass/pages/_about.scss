@@ -97,6 +97,7 @@
             background-color: map-get($map: $mainColors, $key: black);
             color: map-get($map: $mainColors, $key: white);
             // padding: rem(20) rem(17) ;
+            font-size: 1rem;
             padding: .7rem 1.625rem;
          
         }
@@ -237,3 +238,4 @@ footer{
             padding: 0.7rem 1.0625rem;
         }
 }
+

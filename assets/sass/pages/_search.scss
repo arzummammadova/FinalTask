@@ -1,0 +1,36 @@
+.search-boxes{
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    .box{
+        width:calc(100% /3 - 30px) ;
+        h2{
+            text-transform: uppercase;
+            font-size: 27px;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+        a{
+            color: black;
+        display: block;
+            margin-bottom: 20px;
+            font-family: sans-serif;
+        }
+        p{
+            color: grey;
+            font-family: sans-serif;
+            
+        }
+    }
+}
+
+
+@media (max-width:992px){
+    .search-boxes {
+     flex-direction: column;
+     .box{
+        width: 100%;
+     }
+    }
+}
